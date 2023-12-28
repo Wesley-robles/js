@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background: rgb(161, 161, 230);
+            font: normal 20pt Arial;
+        }
+        p {
+            
+            color: azure;
+        }
+        div#val {
+            margin-top: 20px;
+        } 
+    </style>
+</head>
+<body>
+    <p>Digite o país de Nascimento</p>
+    <input type="text" name="pais" id="pais"><br>
+    <input type="button" value="validar" onclick="validar()">
+    <div id="val">Aguardando para validar!</div>
+
+    <script>
+        function validar() {
+            var nac = document.getElementById('pais').value;
+            var val = document.getElementById('val');
+            
+            if (nac.toLowerCase() !== 'brasil') {
+                val.innerHTML = `Você nasceu no ${nac}, então não é <strong>brasileiro</strong>`;
+            } else {
+                val.innerHTML = `Você nasceu no ${nac}, então é <strong>brasileiro</strong>`;
+            }
+        }
+    </script>
+</body>
+</html>

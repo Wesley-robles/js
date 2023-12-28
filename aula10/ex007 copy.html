@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazendo sozinho</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+        input {
+            font: normal 20pt Arial;
+            width: 150px;
+        }
+        div#res {
+            font: normal 20pt Arial;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" name="numero1" id="numero1">
+    <input type="number" name="numero2" id="numero2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">Aguardando os valores para calcular!</div>
+
+    <script>
+        function somar(){
+            var n1 = window.document.getElementById(`numero1`)
+            var n2 = window.document.querySelector(`input#numero2`)
+            var res = window.document.getElementById(`res`)
+            var nn1 = Number(n1.value)
+            var nn2 = Number(n2.value)
+            var s = nn1 + nn2
+            res.innerHTML = `A soma do número ${nn1} e o número ${nn2} é ${s}`
+        }
+
+    </script>
+</body>
+</html>
